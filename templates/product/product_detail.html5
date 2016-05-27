@@ -1,0 +1,3 @@
+<h1>Produkt | Detail</h1>
+
+      <?php $this->insert('picture_default', $this->picture); ?>

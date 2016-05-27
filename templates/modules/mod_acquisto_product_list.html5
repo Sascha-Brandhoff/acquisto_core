@@ -1,0 +1,17 @@
+<?php $this->extend('block_searchable'); ?>
+
+<?php $this->block('content'); ?>
+
+  <div class="view">
+    <ul>
+      <?php foreach($this->View as $view): ?>
+      <li class="<?=$view->cssClass; ?><?php if($view->isActive): ?> active<?php endif; ?>"><?php if(!$view->isActive): ?><a href="<?=$view->url; ?>" title="<?=$view->title; ?>"><?php endif; ?><?=$view->title; ?><?php if(!$view->isActive): ?></a><?php endif; ?></li>
+      <?php endforeach; ?>
+    </ul>
+  </div>
+
+  <div class="products<?php if($this->viewSelected): ?> listmode <?=$this->viewSelected;?><?php endif; ?>">
+  <?= $this->html; ?>
+  </div>
+
+<?php $this->endblock(); ?>

@@ -1,0 +1,13 @@
+<div class="product<?php if($this->marked): ?> marked<?php endif; ?><?php if($this->cssClass): ?> <?=$this->cssClass; ?><?php endif; ?>" id="product<?=$this->id; ?>">
+  <h1><?=$this->name; ?></h1>
+
+  <?=$this->teaser; ?>
+
+  <?php if($this->detailUrl): ?>
+  <a href="<?=$this->detailUrl;?>" title="">Details</a>
+  <?php endif; ?>
+
+  <?php if($this->addUrl): ?>
+  <a href="<?=$this->addUrl;?>" title="">in den Warenkorb</a>
+  <?php endif; ?>
+</div>
